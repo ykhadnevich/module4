@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+body {
+  background-color: yellow;
+  color: blue;
+}
+</style>
+<head>
+  <meta charset="utf-8">
+  <title>Module 4</title>
+  <script>
+  	(function(window) {
+	var firstWord = "Good Bye";
+	var byeSpeaker = function (name) {
+  		console.log(firstWord + " " + name);
+	}
+	
+	window.byeSpeaker = byeSpeaker;
+
+})(window);
+  	(function(window) {
+	var firstWord = "Hello";
+	var helloSpeaker = function (name) {
+		console.log(firstWord + " " + name);
+	}
+
+	window.helloSpeaker = helloSpeaker;
+
+})(window);
+(function () {
+
+var names = ["Liam", "Ava", "Noah", "Mia", "Ethan", "Olivia", "William", "Sophia", "James", "Isabella", "Logan", "Charlotte", "Benjamin", "Amelia", "Mason", "Evelyn", "Lucas", "Abigail", "Jacob", "Harper"];
+
+for (var i = 0; i < names.length; i++) {
+  var firstLetter = names[i].charAt(0).toLowerCase();
+
+  if (firstLetter === 'J') {
+    byeSpeaker(names[i]);
+  }
+  else {
+    helloSpeaker(names[i]);
+  }
+}
+
+})();
+
+
+
+</script>
+</head>
+<body>
+  <h1 > Module 4</h1>
+  <p>Click f12 and open console</p>
+</body>
+</html>
